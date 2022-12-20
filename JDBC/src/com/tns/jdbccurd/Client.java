@@ -10,7 +10,7 @@ public class Client {
         service.addStudent();
         //service.getStudents();
        //service.updateStudent();
-       service.deleteStudnet();
+       //service.deleteStudnet();
 		//service.storedProcedure();
         //service.closeSession();
 	}
