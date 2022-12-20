@@ -23,14 +23,14 @@ public class Service {
 	//Create
 	public void addStudent() throws SQLException
 	{
-		String sql="insert into student(std_id,std_name,std_branch) values(4,'tim','IT')";
+		String sql="insert into sainadh.student(std_id,std_name,std_branch) values(4,'tim','IT')";
 		this.pst=con.prepareStatement(sql);
 		int row=pst.executeUpdate();
 		System.out.println(row + "row"+ "afftected");
 	}
 	//Retrieve/Read 
 	public void getStudents() throws SQLException{
-		String sql="select * from student";
+		String sql="select * from sainadh.student";
 		ResultSet rs=st.executeQuery(sql);
 		
 		while(rs.next())
@@ -41,7 +41,7 @@ public class Service {
 	}
 	//update
 	public void updateStudent() throws SQLException{
-		String sql="update student set sbranch='MCA' where sid=104";
+		String sql="update sainadh.student set sbranch='MCA' where sid=104";
 		int b=st.executeUpdate(sql);
 		//System.out.println(b);
 		
@@ -49,7 +49,7 @@ public class Service {
 	}
 	//delete
   public void deleteStudnet() throws SQLException{
-	  String sql="delete from student where sid=104";
+	  String sql="delete from sainadh.student where sid=104";
 		int i=st.executeUpdate(sql);
 		System.out.println(i+"  row affected");
   }
